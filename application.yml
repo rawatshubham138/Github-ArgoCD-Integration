@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/vntech-engineering97/github-argocdintegration.git
+    repoURL: https://github.com/rawatshubham138/Github-ArgoCD-Integration.git
     targetRevision: HEAD
     path: dev
   destination: 
