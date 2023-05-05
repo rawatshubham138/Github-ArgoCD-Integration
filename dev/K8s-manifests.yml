@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: nodejs-app
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: nodejs-app
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: nodejs-app
-          image: rawatshubham138/nodeapp:latest
+          image: rawatshubham138/nextjs-cicd:latest 
           ports:
             - containerPort: 3000
 
