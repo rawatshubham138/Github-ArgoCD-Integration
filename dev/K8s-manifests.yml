@@ -26,8 +26,26 @@ metadata:
 spec:
   selector:
     app: nodejs-app
-  type: NodePort  
   ports:
     - port: 80
       targetPort: 3000
-      nodePort: 30010
+      
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: myingress
+  labels:
+    name: myingress
+spec:
+  rules:
+  - host:
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: nodejs-app-service
+            port: 
+              number: 80
