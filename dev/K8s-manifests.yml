@@ -26,7 +26,8 @@ metadata:
 spec:
   selector:
     app: nodejs-app
+  type: NodePort  
   ports:
-    - name: http
-      port: 80
+    - port: 80
       targetPort: 3000
+      nodePort: 30010
